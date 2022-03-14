@@ -184,7 +184,7 @@ function IntegrationsContainer() {
             ))}
           </List>
 
-          <ShellSubHeading
+          {/*<ShellSubHeading
             className="mt-10"
             title={
               <SubHeadingTitleWithConnections title={t("payment")} numConnections={data.payment.numActive} />
@@ -198,7 +198,7 @@ function IntegrationsContainer() {
                 actions={<ConnectOrDisconnectIntegrationButton {...item} />}
               />
             ))}
-          </List>
+          </List>*/}
         </>
       )}></QueryCell>
   );
@@ -291,7 +291,7 @@ export default function IntegrationsPage() {
         <CalendarListContainer />
         <WebhookListContainer title={t("webhooks")} subtitle={t("receive_cal_meeting_data")} />
         <IframeEmbedContainer />
-        <Web3Container />
+        {/*<Web3Container />*/}
       </ClientSuspense>
     </Shell>
   );

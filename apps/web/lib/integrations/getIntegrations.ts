@@ -54,38 +54,38 @@ export const ALL_INTEGRATIONS = [
     description: "Video Conferencing",
     variant: "conferencing",
   },
-  {
-    installed: !!process.env.DAILY_API_KEY,
-    type: "daily_video",
-    title: "Daily.co Video",
-    imageSrc: "integrations/daily.svg",
-    description: "Video Conferencing",
-    variant: "conferencing",
-  },
-  {
-    installed: true,
-    type: "jitsi_video",
-    title: "Jitsi Meet",
-    imageSrc: "integrations/jitsi.svg",
-    description: "Video Conferencing",
-    variant: "conferencing",
-  },
-  {
-    installed: true,
-    type: "huddle01_video",
-    title: "Huddle01",
-    imageSrc: "integrations/huddle.svg",
-    description: "Video Conferencing",
-    variant: "conferencing",
-  },
-  {
-    installed: !!(process.env.TANDEM_CLIENT_ID && process.env.TANDEM_CLIENT_SECRET),
-    type: "tandem_video",
-    title: "Tandem Video",
-    imageSrc: "integrations/tandem.svg",
-    description: "Virtual Office | Video Conferencing",
-    variant: "conferencing",
-  },
+  // {
+  //   installed: !!process.env.DAILY_API_KEY,
+  //   type: "daily_video",
+  //   title: "Daily.co Video",
+  //   imageSrc: "integrations/daily.svg",
+  //   description: "Video Conferencing",
+  //   variant: "conferencing",
+  // },
+  // {
+  //   installed: true,
+  //   type: "jitsi_video",
+  //   title: "Jitsi Meet",
+  //   imageSrc: "integrations/jitsi.svg",
+  //   description: "Video Conferencing",
+  //   variant: "conferencing",
+  // },
+  // {
+  //   installed: true,
+  //   type: "huddle01_video",
+  //   title: "Huddle01",
+  //   imageSrc: "integrations/huddle.svg",
+  //   description: "Video Conferencing",
+  //   variant: "conferencing",
+  // },
+  // {
+  //   installed: !!(process.env.TANDEM_CLIENT_ID && process.env.TANDEM_CLIENT_SECRET),
+  //   type: "tandem_video",
+  //   title: "Tandem Video",
+  //   imageSrc: "integrations/tandem.svg",
+  //   description: "Virtual Office | Video Conferencing",
+  //   variant: "conferencing",
+  // },
   {
     installed: true,
     type: "caldav_calendar",
@@ -102,26 +102,26 @@ export const ALL_INTEGRATIONS = [
     description: "For personal and business calendars",
     variant: "calendar",
   },
-  {
-    installed: !!(
-      process.env.STRIPE_CLIENT_ID &&
-      process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY &&
-      process.env.STRIPE_PRIVATE_KEY
-    ),
-    type: "stripe_payment",
-    title: "Stripe",
-    imageSrc: "integrations/stripe.svg",
-    description: "Collect payments",
-    variant: "payment",
-  },
-  {
-    installed: true,
-    type: "metamask_web3",
-    title: "Metamask",
-    imageSrc: "integrations/apple-calendar.svg",
-    description: "For personal and business calendars",
-    variant: "web3",
-  },
+  // {
+  //   installed: !!(
+  //     process.env.STRIPE_CLIENT_ID &&
+  //     process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY &&
+  //     process.env.STRIPE_PRIVATE_KEY
+  //   ),
+  //   type: "stripe_payment",
+  //   title: "Stripe",
+  //   imageSrc: "integrations/stripe.svg",
+  //   description: "Collect payments",
+  //   variant: "payment",
+  // },
+  // {
+  //   installed: true,
+  //   type: "metamask_web3",
+  //   title: "Metamask",
+  //   imageSrc: "integrations/apple-calendar.svg",
+  //   description: "For personal and business calendars",
+  //   variant: "web3",
+  // },
 ] as Integration[];
 
 function getIntegrations(userCredentials: CredentialData[]) {
