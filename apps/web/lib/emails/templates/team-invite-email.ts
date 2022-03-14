@@ -159,38 +159,6 @@ export default class TeamInviteEmail {
           <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
             <tbody>
               <tr>
-                <td style="border-left:1px solid #E1E1E1;border-right:1px solid #E1E1E1;direction:ltr;font-size:0px;padding:0px;text-align:center;">
-                  <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:598px;" ><![endif]-->
-                  <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
-                      <tbody>
-                        <tr>
-                          <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                            <div style="font-family:Roboto, Helvetica, sans-serif;font-size:16px;font-weight:500;line-height:1;text-align:left;color:#3E3E3E;">
-                              <div style="line-height: 6px;">
-                                <p style="font-weight: 400; line-height: 24px;">${this.teamInviteEvent.language(
-                                  "have_any_questions"
-                                )} <a href="mailto:support@cal.com" style="color: #3E3E3E" target="_blank">${this.teamInviteEvent.language(
-      "contact_our_support_team"
-    )}</a></p>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <!--[if mso | IE]></td></tr></table><![endif]-->
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#FFFFFF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-        <div style="background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:600px;">
-          <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
-            <tbody>
-              <tr>
                 <td style="border-bottom:1px solid #E1E1E1;border-left:1px solid #E1E1E1;border-right:1px solid #E1E1E1;direction:ltr;font-size:0px;padding:0px;text-align:center;">
                   <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr></tr></table><![endif]-->
                 </td>

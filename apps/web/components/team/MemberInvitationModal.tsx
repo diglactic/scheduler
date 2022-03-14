@@ -82,7 +82,7 @@ export default function MemberInvitationModal(props: { team: TeamWithMembers | n
                 label={t("email_or_username")}
                 id="inviteUser"
                 name="inviteUser"
-                placeholder="email@example.com"
+                placeholder="astronaut@diglactic.com"
                 required
               />
               <div>
@@ -111,16 +111,6 @@ export default function MemberInvitationModal(props: { team: TeamWithMembers | n
                     {t("send_invite_email")}
                   </label>
                 </div>
-              </div>
-              <div className="flex flex-row rounded-sm bg-gray-50 px-3 py-2">
-                <InformationCircleIcon className="h-5 w-5 flex-shrink-0 fill-gray-400" aria-hidden="true" />
-                <span className="ml-2 text-sm leading-tight text-gray-500">
-                  Note: This will cost an extra seat ($12/m) on your subscription if this invitee does not
-                  have a pro account.{" "}
-                  <a href="#" className="underline">
-                    Learn More
-                  </a>
-                </span>
               </div>
             </div>
             {errorMessage && (

@@ -1,4 +1,4 @@
-import { MembershipRole } from "@prisma/client";
+import {MembershipRole, UserPlan} from "@prisma/client";
 import { randomBytes } from "crypto";
 import type { NextApiRequest, NextApiResponse } from "next";
 

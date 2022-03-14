@@ -69,9 +69,6 @@ ${this.passwordEvent.language("hi_user_name", { user: this.passwordEvent.user.na
 ${this.passwordEvent.language("someone_requested_password_reset")}
 ${this.passwordEvent.language("change_password")}: ${this.passwordEvent.resetLink}
 ${this.passwordEvent.language("password_reset_instructions")}
-${this.passwordEvent.language("have_any_questions")} ${this.passwordEvent.language(
-      "contact_our_support_team"
-    )}
 `.replace(/(<([^>]+)>)/gi, "");
   }
 
@@ -177,13 +174,6 @@ ${this.passwordEvent.language("have_any_questions")} ${this.passwordEvent.langua
                                 )}</p>
                               </div>
                               <p style="height: 6px"></p>
-                              <div style="line-height: 6px;">
-                                <p style="font-weight: 400; line-height: 24px;">${this.passwordEvent.language(
-                                  "have_any_questions"
-                                )} <a href="mailto:support@cal.com" style="color: #3E3E3E" target="_blank">${this.passwordEvent.language(
-      "contact_our_support_team"
-    )}</a></p>
-                              </div>
                             </div>
                           </td>
                         </tr>
