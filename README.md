@@ -197,8 +197,7 @@ The Docker configuration can be found [in our docker repository](https://github.
 7. Now select [Credentials](https://console.cloud.google.com/apis/credentials) from the side pane and then select Create
    Credentials. Select the OAuth Client ID option.
 8. Select Web Application as the Application Type.
-9. Under Authorized redirect URI's, select Add URI and then add the
-   URI `<Cal.com URL>/api/integrations/googlecalendar/callback` replacing Cal.com URL with the URI at which your
+9. Under Authorized redirect URI's, select Add URI and then add `<Cal.com URL>/api/integrations/googlecalendar/callback` and `<Cal.com URL>/api/integrations/google/callback`, replacing Cal.com URL with the URI at which your
    application runs.
 10. The key will be created and you will be redirected back to the Credentials page. Select the newly generated client
     ID under OAuth 2.0 Client IDs.
