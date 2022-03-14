@@ -4,6 +4,11 @@ Fork of the lovely https://github.com/calcom/cal.com.
 
 ## Cheatsheet
 
+### Generate `CALENDSO_ENCRYPTION_KEY` for TOTP
+```shell
+openssl rand dgst -sha256                                              
+```
+
 ### Create scoped user
 ```postgresql
 CREATE ROLE user PASSWORD 'password'
