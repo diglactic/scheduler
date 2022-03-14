@@ -4,6 +4,12 @@ Fork of the lovely https://github.com/calcom/cal.com.
 
 ## Cheatsheet
 
+### Create scoped user
+```postgresql
+CREATE ROLE user PASSWORD 'password'
+GRANT ALL PRIVILEGES ON SCHEMA public TO user
+```
+
 ### Reset migrations and seed
 ```shell
 npx prisma migrate reset
