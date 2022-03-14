@@ -19,6 +19,7 @@ export const seoConfig: {
     siteName: "Cal.com",
   },
   defaultNextSeo: {
+    title: "Just a sec...",
     twitter: {
       handle: "@calcom",
       site: "@calcom",

@@ -328,7 +328,8 @@ const BookingPage = (props: BookingPageProps) => {
                     {t("requires_ownership_of_a_token") + " " + eventType.metadata.smartContractAddress}
                   </p>
                 )}
-                <p className="mb-8 text-gray-600 dark:text-white">{props.eventType.description}</p>
+                {/*eslint-disable-next-line*/}
+                <p className="text-gray-600 dark:text-white whitespace-pre-line">{props.eventType.description}</p>
               </div>
               <div className="sm:w-1/2 sm:pl-8 sm:pr-4">
                 <Form form={bookingForm} handleSubmit={bookEvent}>
