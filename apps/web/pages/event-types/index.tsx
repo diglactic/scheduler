@@ -35,6 +35,7 @@ import Dropdown, {
   DropdownMenuItem,
 } from "@components/ui/Dropdown";
 import UserCalendarIllustration from "@components/ui/svg/UserCalendarIllustration";
+import {UserPlan} from "@prisma/client";
 
 type Profiles = inferQueryOutput<"viewer.eventTypes">["profiles"];
 type EventTypeGroups = inferQueryOutput<"viewer.eventTypes">["eventTypeGroups"];
@@ -331,7 +332,7 @@ const EventTypesPage = () => {
           query={query}
           success={({ data }) => (
             <>
-              {data.viewer.plan === "FREE" && !data.viewer.canAddEvents && (
+              {data.viewer.plan === UserPlan.FREE && !data.viewer.canAddEvents && (
                 <Alert
                   severity="warning"
                   title={<>{t("plan_upgrade")}</>}

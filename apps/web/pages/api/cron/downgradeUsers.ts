@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 import { TRIAL_LIMIT_DAYS } from "@lib/config/constants";
 import prisma from "@lib/prisma";
+import {UserPlan} from "@prisma/client";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const apiKey = req.headers.authorization || req.query.apiKey;
@@ -23,10 +24,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   await prisma.user.updateMany({
     data: {
-      plan: "FREE",
+      plan: UserPlan.FREE,
     },
     where: {
-      plan: "TRIAL",
+      plan: UserPlan.TRIAL,
       OR: [
         /**
          * If the user doesn't have a trial end date,

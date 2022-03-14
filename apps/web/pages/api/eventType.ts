@@ -1,4 +1,4 @@
-import { Prisma } from "@prisma/client";
+import {Prisma, UserPlan} from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSession } from "next-auth/react";
 
@@ -110,7 +110,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }, {} as Record<number, EventTypeGroup["eventTypes"][number]>);
   const mergedEventTypes = Object.values(eventTypesHashMap).map((et, index) => ({
     ...et,
-    $disabled: user?.plan === "FREE" && index > 0,
+    $disabled: user?.plan === UserPlan.FREE && index > 0,
   }));
 
   return res.status(200).json({ eventTypes: mergedEventTypes });

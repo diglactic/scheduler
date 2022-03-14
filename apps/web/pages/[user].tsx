@@ -16,6 +16,7 @@ import { inferSSRProps } from "@lib/types/inferSSRProps";
 import { AvatarSSR } from "@components/ui/AvatarSSR";
 
 import { ssrInit } from "@server/lib/ssr";
+import {UserPlan} from "@prisma/client";
 
 const EventTypeDescription = dynamic(() => import("@components/eventtype/EventTypeDescription"));
 const HeadSeo = dynamic(() => import("@components/seo/head-seo").then((mod) => mod.HeadSeo));
@@ -215,7 +216,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
       currency: true,
       metadata: true,
     },
-    take: user.plan === "FREE" ? 1 : undefined,
+    take: user.plan === UserPlan.FREE ? 1 : undefined,
   });
   const dataFetchEnd = Date.now();
   if (context.query.log === "1") {

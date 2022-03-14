@@ -31,6 +31,7 @@ import Avatar from "@components/ui/Avatar";
 import Badge from "@components/ui/Badge";
 import Button from "@components/ui/Button";
 import ColorPicker from "@components/ui/colorpicker";
+import {UserPlan} from "@prisma/client";
 
 type Props = inferSSRProps<typeof getServerSideProps>;
 
@@ -50,7 +51,7 @@ function HideBrandingInput(props: { hideBrandingRef: RefObject<HTMLInputElement>
           "h-4 w-4 rounded-sm border-gray-300 text-neutral-900 focus:ring-neutral-800 disabled:opacity-50"
         }
         onClick={(e) => {
-          if (!e.currentTarget.checked || props.user.plan !== "FREE") {
+          if (!e.currentTarget.checked || props.user.plan !== UserPlan.FREE) {
             return;
           }
 
@@ -450,7 +451,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
                 <div className="text-sm ltr:ml-3 rtl:mr-3">
                   <label htmlFor="hide-branding" className="font-medium text-gray-700">
                     {t("disable_cal_branding")}{" "}
-                    {props.user.plan !== "PRO" && <Badge variant="default">PRO</Badge>}
+                    {props.user.plan !== UserPlan.PRO && <Badge variant="default">PRO</Badge>}
                   </label>
                   <p className="text-gray-500">{t("disable_cal_branding_description")}</p>
                 </div>

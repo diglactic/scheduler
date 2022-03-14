@@ -15,6 +15,7 @@ import TeamCreateModal from "@components/team/TeamCreateModal";
 import TeamList from "@components/team/TeamList";
 import { Alert } from "@components/ui/Alert";
 import Button from "@components/ui/Button";
+import {UserPlan} from "@prisma/client";
 
 export default function Teams() {
   const { t } = useLocale();
@@ -35,7 +36,7 @@ export default function Teams() {
 
   const teams = data?.filter((m) => m.accepted) || [];
   const invites = data?.filter((m) => !m.accepted) || [];
-  const isFreePlan = me.data?.plan === "FREE";
+  const isFreePlan = me.data?.plan === UserPlan.FREE;
 
   return (
     <Shell heading={t("teams")} subtitle={t("create_manage_teams_collaborative")}>

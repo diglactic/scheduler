@@ -10,6 +10,7 @@ import Loader from "@components/Loader";
 import Shell, { useMeQuery } from "@components/Shell";
 import { Alert } from "@components/ui/Alert";
 import Avatar from "@components/ui/Avatar";
+import {UserPlan} from "@prisma/client";
 
 export function TeamAvailabilityPage() {
   const router = useRouter();
@@ -17,7 +18,7 @@ export function TeamAvailabilityPage() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const me = useMeQuery();
-  const isFreeUser = me.data?.plan === "FREE";
+  const isFreeUser = me.data?.plan === UserPlan.FREE;
 
   const { data: team, isLoading } = trpc.useQuery(["viewer.teams.get", { teamId: Number(router.query.id) }], {
     refetchOnWindowFocus: false,

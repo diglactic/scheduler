@@ -1,4 +1,4 @@
-import { BookingStatus, MembershipRole, Prisma } from "@prisma/client";
+import {BookingStatus, MembershipRole, Prisma, UserPlan} from "@prisma/client";
 import _ from "lodash";
 import { JSONObject } from "superjson/dist/types";
 import { z } from "zod";
@@ -245,7 +245,7 @@ const loggedInViewerRouter = createProtectedRouter()
       }, {} as Record<number, EventTypeGroup["eventTypes"][number]>);
       const mergedEventTypes = Object.values(eventTypesHashMap).map((et, index) => ({
         ...et,
-        $disabled: user.plan === "FREE" && index > 0,
+        $disabled: user.plan === UserPlan.FREE && index > 0,
       }));
 
       eventTypeGroups.push({
@@ -279,7 +279,7 @@ const loggedInViewerRouter = createProtectedRouter()
         }))
       );
 
-      const canAddEvents = user.plan !== "FREE" || eventTypeGroups[0].eventTypes.length < 1;
+      const canAddEvents = user.plan !== UserPlan.FREE || eventTypeGroups[0].eventTypes.length < 1;
 
       return {
         viewer: {
@@ -763,7 +763,7 @@ const loggedInViewerRouter = createProtectedRouter()
 
       // in teams view we already check for isAdmin
       if (teamsView) {
-        enabled = enabled && user.plan === "PRO";
+        enabled = enabled && user.plan === UserPlan.PRO;
       } else {
         enabled = enabled && isSAMLAdmin(user.email);
       }

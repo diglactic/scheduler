@@ -160,7 +160,7 @@ async function main() {
       password: "delete-me",
       username: "delete-me",
       name: "delete-me",
-      plan: "FREE",
+      plan: UserPlan.FREE,
     },
     eventTypes: [],
   });
@@ -171,7 +171,7 @@ async function main() {
       password: "onboarding",
       username: "onboarding",
       name: "onboarding",
-      plan: "TRIAL",
+      plan: UserPlan.TRIAL,
       completedOnboarding: false,
     },
     eventTypes: [],
@@ -183,7 +183,7 @@ async function main() {
       password: "free-first-hidden",
       username: "free-first-hidden",
       name: "Free First Hidden Example",
-      plan: "FREE",
+      plan: UserPlan.FREE,
     },
     eventTypes: [
       {
@@ -205,7 +205,7 @@ async function main() {
       name: "Pro Example",
       password: "pro",
       username: "pro",
-      plan: "PRO",
+      plan: UserPlan.PRO,
     },
 
     eventTypes: [
@@ -249,7 +249,7 @@ async function main() {
       password: "trial",
       username: "trial",
       name: "Trial Example",
-      plan: "TRIAL",
+      plan: UserPlan.TRIAL,
     },
     eventTypes: [
       {
@@ -271,7 +271,7 @@ async function main() {
       password: "free",
       username: "free",
       name: "Free Example",
-      plan: "FREE",
+      plan: UserPlan.FREE,
     },
     eventTypes: [
       {
@@ -293,7 +293,7 @@ async function main() {
       password: "usa",
       username: "usa",
       name: "USA Timezone Example",
-      plan: "FREE",
+      plan: UserPlan.FREE,
       timeZone: "America/Phoenix",
     },
     eventTypes: [
@@ -311,7 +311,7 @@ async function main() {
       password: "teamfree",
       username: "teamfree",
       name: "Team Free Example",
-      plan: "FREE",
+      plan: UserPlan.FREE,
     },
     eventTypes: [],
   });
@@ -322,7 +322,7 @@ async function main() {
       password: "teampro",
       username: "teampro",
       name: "Team Pro Example",
-      plan: "PRO",
+      plan: UserPlan.PRO,
     },
     eventTypes: [],
   });
