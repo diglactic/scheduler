@@ -1008,11 +1008,6 @@
     intl-messageformat "9.11.4"
     tslib "^2.1.0"
 
-"@headlessui/react@^1.4.2":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.5.0.tgz#483b44ba2c8b8d4391e1d2c863898d7dd0cc0296"
-  integrity sha512-aaRnYxBb3MU2FNJf3Ut9RMTUqqU3as0aI1lQhgo2n9Fa67wRu14iOGqx93xB+uMNVfNwZ5B3y/Ndm7qZGuFeMQ==
-
 "@heroicons/react@^1.0.5":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.6.tgz#35dd26987228b39ef2316db3b1245c42eb19e324"
@@ -1552,9 +1547,9 @@
     regenerator-runtime "^0.13.3"
 
 "@jitsu/sdk-js@^2.2.4":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@jitsu/sdk-js/-/sdk-js-2.4.0.tgz#fccfe5821766e7b623e89386ef0d359d797031b4"
-  integrity sha512-2BO6NYJOLdKy3jt5fCAQPXukK+esFTRD1g3D1vqLPq7iHgCwOJgG1V9j02ILeTEFlaFKeu59B3FM81orhbGymA==
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@jitsu/sdk-js/-/sdk-js-2.4.1.tgz#a1fdb1072f7d09938aefeff0ce2d9a44425d8a54"
+  integrity sha512-c1khU8wZZs9q98fFpanCMTova4v3r7m30gOdjSY38cL51PUt4znJO1dOHrPErDEb7nFaBMj96TEnjsj8mcZvxQ==
 
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.0.5"
@@ -3941,9 +3936,9 @@ camelcase@^6.0.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001283, caniuse-lite@^1.0.30001297, caniuse-lite@^1.0.30001313:
-  version "1.0.30001315"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001315.tgz#f1b1efd1171ee1170d52709a7252632dacbd7c77"
-  integrity sha512-5v7LFQU4Sb/qvkz7JcZkvtSH1Ko+1x2kgo3ocdBeMGZSOFpuE1kkm0kpTwLtWeFrw5qw08ulLxJjVIXIS8MkiQ==
+  version "1.0.30001316"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001316.tgz#b44a1f419f82d2e119aa0bbdab5ec15471796358"
+  integrity sha512-JgUdNoZKxPZFzbzJwy4hDSyGuH/gXz2rN51QmoR8cBQsVo58llD3A0vlRKKRt8FGf5u69P9eQyIH8/z9vN/S0Q==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -9002,9 +8997,9 @@ parse-bmfont-xml@^1.1.4:
     xml2js "^0.4.5"
 
 parse-headers@^2.0.0:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/parse-headers/-/parse-headers-2.0.4.tgz#9eaf2d02bed2d1eff494331ce3df36d7924760bf"
-  integrity sha512-psZ9iZoCNFLrgRjZ1d8mn0h9WRqJwFxM9q3x7iUjN/YT2OksthDJ5TiPCu2F38kS4zutqfW+YdVVkBZZx3/1aw==
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/parse-headers/-/parse-headers-2.0.5.tgz#069793f9356a54008571eb7f9761153e6c770da9"
+  integrity sha512-ft3iAoLOB/MlwbNXgzy43SWGP6sQki2jQvAyBg/zDFAgr9bfNWZIUj42Kw2eJIl8kEi4PbgE6U1Zau/HwI75HA==
 
 parse-json@^4.0.0:
   version "4.0.0"
