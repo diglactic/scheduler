@@ -330,6 +330,7 @@ export default NextAuth({
           return "/auth/error?error=use-identity-login";
         }
 
+        /*
         await prisma.user.create({
           data: {
             // Slugify the incoming name and append a few random characters to
@@ -344,6 +345,7 @@ export default NextAuth({
         });
 
         return true;
+         */
       }
 
       return false;
