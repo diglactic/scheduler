@@ -471,13 +471,13 @@ const BookingPage = (props: BookingPageProps) => {
                   {!props.eventType.disableGuests && (
                     <div className="mb-4">
                       {!guestToggle && (
-                        <label
+                        <button
                           onClick={() => setGuestToggle(!guestToggle)}
                           htmlFor="guests"
                           className="mb-1 block text-sm font-medium hover:cursor-pointer dark:text-white">
                           {/*<UserAddIcon className="inline-block w-5 h-5 mr-1 -mt-1" />*/}
                           {t("additional_guests")}
-                        </label>
+                        </button>
                       )}
                       {guestToggle && (
                         <div>
