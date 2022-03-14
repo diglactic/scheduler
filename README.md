@@ -13,6 +13,7 @@ openssl rand dgst -sha256
 ```postgresql
 CREATE ROLE user PASSWORD 'password'
 GRANT ALL PRIVILEGES ON SCHEMA public TO user
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO user
 ```
 
 ### Reset migrations and seed
