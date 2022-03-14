@@ -219,7 +219,8 @@ const AvailabilityPage = ({ profile, eventType, workingHours, previousPage }: Pr
 
                   <TimezoneDropdown />
 
-                  <p className="mt-3 mb-8 text-gray-600 dark:text-gray-200">{eventType.description}</p>
+                  {/*eslint-disable-next-line*/}
+                  <p className="mt-3 mb-8 text-gray-600 dark:text-gray-200 whitespace-pre-line">{eventType.description}</p>
                   {previousPage === `${BASE_URL}/${profile.slug}` && (
                     <div className="flex h-full flex-col justify-end">
                       <ArrowLeftIcon
