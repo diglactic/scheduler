@@ -14,7 +14,7 @@ test("Can reset forgotten password", async ({ browser }) => {
   // Got to reset password flow
   await page.goto("/auth/forgot-password");
 
-  // Fill [placeholder="john.doe@example.com"]
+  // Fill [placeholder="astronaut@diglactic.com"]
   await page.fill('input[name="email"]', "pro@example.com");
 
   // Press Enter

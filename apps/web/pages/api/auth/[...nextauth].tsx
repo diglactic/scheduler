@@ -22,7 +22,7 @@ const providers: Provider[] = [
     name: "Cal.com",
     type: "credentials",
     credentials: {
-      email: { label: "Email Address", type: "email", placeholder: "john.doe@example.com" },
+      email: { label: "Email Address", type: "email", placeholder: "astronaut@diglactic.com" },
       password: { label: "Password", type: "password", placeholder: "Your super secure password" },
       totpCode: { label: "Two-factor Code", type: "input", placeholder: "Code from authenticator app" },
     },

@@ -115,7 +115,7 @@ export default function Login({
             <EmailField
               id="email"
               label={t("email_address")}
-              placeholder="john.doe@example.com"
+              placeholder="astronaut@diglactic.com"
               required
               {...form.register("email")}
             />

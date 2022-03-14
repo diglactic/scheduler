@@ -397,7 +397,7 @@ function UserDropdown({ small }: { small?: boolean }) {
               <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-green-500"></div>
             )}
             {user?.away && (
-              <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-yellow-500"></div>
+              <div className="abstleolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-yellow-500"></div>
             )}
           </span>
           {!small && (

@@ -106,7 +106,7 @@ export default function ForgotPassword({ csrfToken }: { csrfToken: string }) {
               id="email"
               name="email"
               label={t("email_address")}
-              placeholder="john.doe@example.com"
+              placeholder="astronaut@diglactic.com"
               required
             />
             <div className="space-y-2">
