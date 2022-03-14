@@ -1,4 +1,4 @@
-import { Credential, Prisma, SchedulingType, WebhookTriggerEvents } from "@prisma/client";
+import { BookingStatus, Credential, Prisma, SchedulingType, WebhookTriggerEvents } from "@prisma/client";
 import async from "async";
 import dayjs from "dayjs";
 import dayjsBusinessTime from "dayjs-business-time";
@@ -12,10 +12,10 @@ import { v5 as uuidv5 } from "uuid";
 import { handlePayment } from "@ee/lib/stripe/server";
 
 import {
-  sendScheduledEmails,
-  sendRescheduledEmails,
-  sendOrganizerRequestEmail,
   sendAttendeeRequestEmail,
+  sendOrganizerRequestEmail,
+  sendRescheduledEmails,
+  sendScheduledEmails,
 } from "@lib/emails/email-manager";
 import { ensureArray } from "@lib/ensureArray";
 import { getErrorFromUnknown } from "@lib/errors";
@@ -23,7 +23,7 @@ import { getEventName } from "@lib/event";
 import EventManager, { EventResult, PartialReference } from "@lib/events/EventManager";
 import { getBusyCalendarTimes } from "@lib/integrations/calendar/CalendarManager";
 import { EventBusyDate } from "@lib/integrations/calendar/constants/types";
-import { CalendarEvent, AdditionInformation } from "@lib/integrations/calendar/interfaces/Calendar";
+import { AdditionInformation, CalendarEvent } from "@lib/integrations/calendar/interfaces/Calendar";
 import { BufferedBusyTime } from "@lib/integrations/calendar/interfaces/Office365Calendar";
 import logger from "@lib/logger";
 import notEmpty from "@lib/notEmpty";
@@ -434,6 +434,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         where: {
           userId: currentUser.id,
           eventTypeId: eventTypeId,
+          NOT: {
+            status: {
+              in: [BookingStatus.REJECTED, BookingStatus.CANCELLED],
+            },
+          },
         },
       })
       .then((bookings) => bookings.map((booking) => ({ end: booking.endTime, start: booking.startTime })));
