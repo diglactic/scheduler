@@ -199,7 +199,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
     const enteredDarkBrandColor = darkBrandColor;
     const enteredTimeZone = typeof selectedTimeZone === "string" ? selectedTimeZone : selectedTimeZone.value;
     const enteredWeekStartDay = selectedWeekStartDay.value;
-    const enteredHideBranding = hideBrandingRef.current.checked;
+    // const enteredHideBranding = hideBrandingRef.current?.checked;
     const enteredLanguage = selectedLanguage.value;
     const enteredTimeFormat = selectedTimeFormat.value;
 
@@ -213,7 +213,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
       avatar: enteredAvatar,
       timeZone: enteredTimeZone,
       weekStart: asStringOrUndefined(enteredWeekStartDay),
-      hideBranding: enteredHideBranding,
+      hideBranding: true, // enteredHideBranding,
       theme: asStringOrNull(selectedTheme?.value),
       brandColor: enteredBrandColor,
       darkBrandColor: enteredDarkBrandColor,

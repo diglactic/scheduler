@@ -41,7 +41,7 @@ export default function TeamSettings(props: Props) {
   const nameRef = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>;
   const teamUrlRef = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>;
   const descriptionRef = useRef<HTMLTextAreaElement>() as React.MutableRefObject<HTMLTextAreaElement>;
-  const hideBrandingRef = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>;
+  // const hideBrandingRef = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>;
   const logoRef = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLInputElement>;
 
   function updateTeamData() {
@@ -50,7 +50,7 @@ export default function TeamSettings(props: Props) {
       name: nameRef.current?.value,
       slug: teamUrlRef.current?.value,
       bio: descriptionRef.current?.value,
-      hideBranding: hideBrandingRef.current?.checked,
+      hideBranding: true, // hideBrandingRef.current?.checked,
     };
     // remove unchanged variables
     for (const key in variables) {
