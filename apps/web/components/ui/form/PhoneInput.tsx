@@ -1,5 +1,4 @@
 import React from "react";
-import { Control } from "react-hook-form";
 import BasePhoneInput, { Props } from "react-phone-number-input/react-hook-form";
 import "react-phone-number-input/style.css";
 
@@ -14,6 +13,7 @@ type PhoneInputProps = {
 
 export const PhoneInput = ({ control, name, ...rest }: Props<PhoneInputProps>) => (
   <BasePhoneInput
+    defaultCountry={"US"}
     {...rest}
     name={name}
     control={control}
