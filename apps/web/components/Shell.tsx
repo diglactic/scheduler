@@ -257,7 +257,7 @@ export default function Shell(props: {
                 </span>
               </div>
               <small style={{ fontSize: "0.5rem" }} className="mx-3 mt-1 mb-2 hidden opacity-50 lg:block">
-                &copy; {new Date().getFullYear()} Cal.com, Inc. v.{version + "-"}
+                v.{version + "-"}
                 {process.env.NEXT_PUBLIC_APP_URL === "https://cal.com" ? "h" : "sh"}
                 <span className="lowercase">-{user && user.plan}</span>
               </small>
