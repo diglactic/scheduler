@@ -172,27 +172,6 @@ export default function TeamSettings(props: Props) {
                       </>
                     }
                   />
-
-                  <hr className="mt-6" />
-                </div>
-
-                <div className="relative flex items-start">
-                  <div className="flex h-5 items-center">
-                    <input
-                      id="hide-branding"
-                      name="hide-branding"
-                      type="checkbox"
-                      ref={hideBrandingRef}
-                      defaultChecked={team?.hideBranding}
-                      className="h-4 w-4 rounded-sm border-gray-300 text-neutral-900 focus:ring-neutral-500"
-                    />
-                  </div>
-                  <div className="text-sm ltr:ml-3 rtl:mr-3">
-                    <label htmlFor="hide-branding" className="font-medium text-gray-700">
-                      {t("disable_cal_branding")}
-                    </label>
-                    <p className="text-gray-500">{t("disable_cal_branding_description")}</p>
-                  </div>
                 </div>
               </div>
             </div>

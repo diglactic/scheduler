@@ -443,20 +443,6 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
               </div>
               <hr className="mt-6" />
             </div>
-            <div>
-              <div className="relative flex items-start">
-                <div className="flex h-5 items-center">
-                  <HideBrandingInput user={props.user} hideBrandingRef={hideBrandingRef} />
-                </div>
-                <div className="text-sm ltr:ml-3 rtl:mr-3">
-                  <label htmlFor="hide-branding" className="font-medium text-gray-700">
-                    {t("disable_cal_branding")}{" "}
-                    {props.user.plan !== UserPlan.PRO && <Badge variant="default">PRO</Badge>}
-                  </label>
-                  <p className="text-gray-500">{t("disable_cal_branding_description")}</p>
-                </div>
-              </div>
-            </div>
             <h3 className="text-md mt-7 font-bold leading-6 text-red-700">{t("danger_zone")}</h3>
             <div>
               <div className="relative flex items-start">
