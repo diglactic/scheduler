@@ -17,14 +17,12 @@ export const emailBodyLogo = (): string => {
               <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                 <tbody>
                   <tr>
-                    <td align="center" style="font-size:0px;padding:10px 25px;padding-top:32px;word-break:break-word;">
+                    <td align="center" style="font-size:0px;padding:32px 25px;word-break:break-word;">
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                         <tbody>
                           <tr>
                             <td style="width:103px;">
-                              <a href="${BASE_URL}" target="_blank">
                                 <img height="25" src="${image}" style="border:0;display:block;outline:none;text-decoration:none;height:25px;width:100%;font-size:13px;" width="103" />
-                              </a>
                             </td>
                           </tr>
                         </tbody>

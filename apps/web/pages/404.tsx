@@ -49,10 +49,10 @@ export default function Custom404() {
         <main className="mx-auto max-w-xl pt-16 pb-6 sm:pt-24">
           <div className="text-center">
             <p className="text-sm font-semibold uppercase tracking-wide text-black">{t("error_404")}</p>
-            <h1 className="font-cal mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl">
+            <h1 className="font-cal my-12 text-4xl font-extrabold text-gray-900 sm:text-5xl">
               {t("page_doesnt_exist")}
             </h1>
-            <span className="mt-2 inline-block text-lg">{t("check_spelling_mistakes_or_go_back")}</span>
+            <span className="inline-block text-lg">{t("check_spelling_mistakes_or_go_back")}</span>
           </div>
         </main>
       </div>
