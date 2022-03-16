@@ -14,15 +14,13 @@ const translator = short();
 export const getWhat = (calEvent: CalendarEvent) => {
   return `
 ${calEvent.organizer.language.translate("what")}:
-${calEvent.type}
-  `;
+${calEvent.type}`;
 };
 
 export const getWhen = (calEvent: CalendarEvent) => {
   return `
 ${calEvent.organizer.language.translate("invitee_timezone")}:
-${calEvent.attendees[0].timeZone}
-  `;
+${calEvent.attendees[0].timeZone}`;
 };
 
 export const getWho = (calEvent: CalendarEvent) => {
@@ -30,27 +28,23 @@ export const getWho = (calEvent: CalendarEvent) => {
     .map((attendee) => {
       return `
 ${attendee?.name || calEvent.organizer.language.translate("guest")}
-${attendee.email}
-      `;
+${attendee.email}`;
     })
     .join("");
 
   const organizer = `
 ${calEvent.organizer.name} - ${calEvent.organizer.language.translate("organizer")}
-${calEvent.organizer.email}
-  `;
+${calEvent.organizer.email}`;
 
   return `
 ${calEvent.organizer.language.translate("who")}:
-${organizer + attendees}
-  `;
+${organizer + attendees}`;
 };
 
 export const getAdditionalNotes = (calEvent: CalendarEvent) => {
   return `
 ${calEvent.organizer.language.translate("additional_notes")}:
-${calEvent.description}
-  `;
+${calEvent.description}`;
 };
 
 export const getLocation = (calEvent: CalendarEvent) => {
@@ -75,8 +69,7 @@ export const getLocation = (calEvent: CalendarEvent) => {
 export const getManageLink = (calEvent: CalendarEvent) => {
   return `
 ${calEvent.organizer.language.translate("need_to_reschedule_or_cancel")}
-${getCancelLink(calEvent)}
-  `;
+${getCancelLink(calEvent)}`;
 };
 
 export const getUid = (calEvent: CalendarEvent): string => {
