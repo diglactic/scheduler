@@ -21,7 +21,7 @@ export default function AuthContainer(props: React.PropsWithChildren<Props>) {
           <img className="mx-auto h-12" src="/diglactic-logo-word-dark.svg" alt="Diglactic Scheduler logo" />
         )}
         {props.heading && (
-          <h2 className="font-cal mt-6 text-center text-3xl font-bold text-neutral-900">{props.heading}</h2>
+          <h2 className="font-cal mt-6 text-center text-3xl text-neutral-900">{props.heading}</h2>
         )}
       </div>
       {props.loading && (
