@@ -21,9 +21,9 @@ export const emailBodyLogo = (): string => {
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                         <tbody>
                           <tr>
-                            <td style="width:89px;">
+                            <td style="width:103px;">
                               <a href="${BASE_URL}" target="_blank">
-                                <img height="19" src="${image}" style="border:0;display:block;outline:none;text-decoration:none;height:19px;width:100%;font-size:13px;" width="89" />
+                                <img height="25" src="${image}" style="border:0;display:block;outline:none;text-decoration:none;height:25px;width:100%;font-size:13px;" width="103" />
                               </a>
                             </td>
                           </tr>
