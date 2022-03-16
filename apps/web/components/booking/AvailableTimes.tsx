@@ -3,7 +3,7 @@ import { SchedulingType } from "@prisma/client";
 import { Dayjs } from "dayjs";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 
 import classNames from "@lib/classNames";
 import { useLocale } from "@lib/hooks/useLocale";
@@ -60,8 +60,16 @@ const AvailableTimes: FC<AvailableTimesProps> = ({
     setBrand(getComputedStyle(document.documentElement).getPropertyValue("--brand-color").trim());
   }, []);
 
+  const keepThisInFocus = useRef<HTMLInputElement>() as React.MutableRefObject<HTMLDivElement>;
+
+  useEffect(() => {
+    if (keepThisInFocus) {
+      keepThisInFocus.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [loading]);
+
   return (
-    <div className="mt-8 flex flex-col text-center sm:mt-0 sm:w-1/3 sm:pl-4 md:-mb-5">
+    <div className="mt-8 flex flex-col text-center sm:mt-0 sm:w-1/3 sm:pl-4 md:-mb-5" ref={keepThisInFocus}>
       <div className="mb-4 text-left text-lg font-light text-gray-600">
         <span className="w-1/2 text-gray-600 dark:text-white">
           <strong>{date.toDate().toLocaleString(i18n.language, { weekday: "long" })}</strong>
