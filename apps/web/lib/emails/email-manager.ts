@@ -24,7 +24,7 @@ export const sendScheduledEmails = async (calEvent: CalendarEvent) => {
           const scheduledEmail = new AttendeeScheduledEmail(calEvent, attendee);
           resolve(scheduledEmail.sendEmail());
         } catch (e) {
-          reject(console.error("AttendeeRescheduledEmail.sendEmail failed", e));
+          reject(console.error("AttendeeScheduledEmail.sendEmail failed", e));
         }
       });
     })
@@ -66,7 +66,7 @@ export const sendRescheduledEmails = async (calEvent: CalendarEvent) => {
         const scheduledEmail = new OrganizerRescheduledEmail(calEvent);
         resolve(scheduledEmail.sendEmail());
       } catch (e) {
-        reject(console.error("OrganizerScheduledEmail.sendEmail failed", e));
+        reject(console.error("OrganizerRescheduledEmail.sendEmail failed", e));
       }
     })
   );
