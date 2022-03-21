@@ -1,5 +1,6 @@
 import { InformationCircleIcon } from "@heroicons/react/outline";
 import { TrashIcon } from "@heroicons/react/solid";
+import { UserPlan } from "@prisma/client";
 import crypto from "crypto";
 import { GetServerSidePropsContext } from "next";
 import { signOut } from "next-auth/react";
@@ -32,7 +33,6 @@ import ConfirmationDialogContent from "@components/dialog/ConfirmationDialogCont
 import Avatar from "@components/ui/Avatar";
 import Badge from "@components/ui/Badge";
 import ColorPicker from "@components/ui/colorpicker";
-import {UserPlan} from "@prisma/client";
 
 type Props = inferSSRProps<typeof getServerSideProps>;
 

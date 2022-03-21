@@ -5,11 +5,13 @@ Fork of the lovely https://github.com/calcom/cal.com.
 ## Cheatsheet
 
 ### Generate `CALENDSO_ENCRYPTION_KEY` for TOTP
+
 ```shell
-openssl rand dgst -sha256                                              
+openssl rand dgst -sha256
 ```
 
 ### Create scoped user
+
 ```postgresql
 CREATE ROLE user PASSWORD 'password'
 GRANT ALL PRIVILEGES ON SCHEMA public TO user
@@ -17,17 +19,21 @@ GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO user
 ```
 
 ### Reset migrations and seed
+
 ```shell
 npx prisma migrate reset
 ```
 
 ### Test locally using heroku-cli and Procfile
+
 ```shell
 heroku local web -p 3000
 ```
 
 ### Debug segfault on Heroku
+
 See https://httptoolkit.tech/blog/how-to-debug-node-segfaults/
+
 ```shell
 find node_modules -iname "*.node"
 ```
@@ -35,6 +41,7 @@ find node_modules -iname "*.node"
 ### Flush DNS cache on MacOS Chrome
 
 `chrome://net-internals/#dns`
+
 ```shell
 sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
 ```
@@ -105,7 +112,7 @@ yarn dx
 
 ### E2E-Testing
 
-```sh
+```shell
 # In first terminal. Must run on port 3000.
 yarn dx
 

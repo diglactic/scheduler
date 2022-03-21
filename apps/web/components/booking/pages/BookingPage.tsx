@@ -327,7 +327,9 @@ const BookingPage = ({ eventType, booking, profile }: BookingPageProps) => {
                   </p>
                 )}
                 {/*eslint-disable-next-line*/}
-                <p className="mb-8 text-gray-600 dark:text-white whitespace-pre-line">{eventType.description}</p>
+                <p className="mb-8 whitespace-pre-line text-gray-600 dark:text-white">
+                  {eventType.description}
+                </p>
               </div>
               <div className="sm:w-1/2 sm:pl-8 sm:pr-4">
                 <Form form={bookingForm} handleSubmit={bookEvent}>

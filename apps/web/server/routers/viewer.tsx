@@ -1,4 +1,4 @@
-import {BookingStatus, MembershipRole, Prisma, UserPlan} from "@prisma/client";
+import { BookingStatus, MembershipRole, Prisma, UserPlan } from "@prisma/client";
 import _ from "lodash";
 import { JSONObject } from "superjson/dist/types";
 import { z } from "zod";

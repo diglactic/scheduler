@@ -1,4 +1,4 @@
-import {Prisma, UserPlan} from "@prisma/client";
+import { Prisma, UserPlan } from "@prisma/client";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSession } from "next-auth/react";
 

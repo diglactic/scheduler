@@ -1,3 +1,4 @@
+import { UserPlan } from "@prisma/client";
 import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
 
@@ -10,7 +11,6 @@ import { trpc } from "@lib/trpc";
 import Loader from "@components/Loader";
 import Shell, { useMeQuery } from "@components/Shell";
 import Avatar from "@components/ui/Avatar";
-import {UserPlan} from "@prisma/client";
 
 export function TeamAvailabilityPage() {
   const router = useRouter();

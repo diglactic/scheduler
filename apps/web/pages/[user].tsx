@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "@heroicons/react/outline";
 import { BadgeCheckIcon } from "@heroicons/react/solid";
+import { UserPlan } from "@prisma/client";
 import { GetServerSidePropsContext } from "next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -16,7 +17,6 @@ import { inferSSRProps } from "@lib/types/inferSSRProps";
 import { AvatarSSR } from "@components/ui/AvatarSSR";
 
 import { ssrInit } from "@server/lib/ssr";
-import {UserPlan} from "@prisma/client";
 
 const EventTypeDescription = dynamic(() => import("@components/eventtype/EventTypeDescription"));
 const HeadSeo = dynamic(() => import("@components/seo/head-seo").then((mod) => mod.HeadSeo));
