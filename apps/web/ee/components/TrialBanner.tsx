@@ -1,18 +1,18 @@
 import dayjs from "dayjs";
 
+import Button from "@calcom/ui/Button";
+
 import { TRIAL_LIMIT_DAYS } from "@lib/config/constants";
 import { useLocale } from "@lib/hooks/useLocale";
 
 import { useMeQuery } from "@components/Shell";
-import Button from "@components/ui/Button";
-import {UserPlan} from "@prisma/client";
 
 const TrialBanner = () => {
   const { t } = useLocale();
   const query = useMeQuery();
   const user = query.data;
 
-  if (!user || user.plan !== UserPlan.TRIAL) return null;
+  if (!user || user.plan !== "TRIAL") return null;
 
   const trialDaysLeft = user.trialEndsAt
     ? dayjs(user.trialEndsAt).add(1, "day").diff(dayjs(), "day")

@@ -105,9 +105,10 @@ yarn dx
 
 ### E2E-Testing
 
-```shell
-# In first terminal
+```sh
+# In first terminal. Must run on port 3000.
 yarn dx
+
 # In second terminal
 yarn workspace @calcom/web test-e2e
 

@@ -17,10 +17,16 @@ import { useRouter } from "next/router";
 import React, { ReactNode, useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 
+import Button from "@calcom/ui/Button";
+import Dropdown, {
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@calcom/ui/Dropdown";
 import LicenseBanner from "@ee/components/LicenseBanner";
 import TrialBanner from "@ee/components/TrialBanner";
-import IntercomMenuItem from "@ee/lib/intercom/IntercomMenuItem";
-import ZendeskMenuItem from "@ee/lib/zendesk/ZendeskMenuItem";
+import HelpMenuItem from "@ee/components/support/HelpMenuItem";
 
 import classNames from "@lib/classNames";
 import { NEXT_PUBLIC_BASE_URL } from "@lib/config/constants";
@@ -32,17 +38,10 @@ import { trpc } from "@lib/trpc";
 import CustomBranding from "@components/CustomBranding";
 import Loader from "@components/Loader";
 import { HeadSeo } from "@components/seo/head-seo";
-import Dropdown, {
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@components/ui/Dropdown";
 
 import pkg from "../package.json";
 import { useViewerI18n } from "./I18nLanguageHandler";
 import Logo from "./Logo";
-import Button from "./ui/Button";
 
 export function useMeQuery() {
   const meQuery = trpc.useQuery(["viewer.me"], {
@@ -258,7 +257,7 @@ export default function Shell(props: {
                 </span>
               </div>
               <small style={{ fontSize: "0.5rem" }} className="mx-3 mt-1 mb-2 hidden opacity-50 lg:block">
-                v.{pkg.version + "-"}
+                &copy; {new Date().getFullYear()} Cal.com, Inc. v.{pkg.version + "-"}
                 {process.env.NEXT_PUBLIC_APP_URL === "https://cal.com" ? "h" : "sh"}
                 <span className="lowercase">-{user && user.plan}</span>
               </small>
@@ -307,7 +306,7 @@ export default function Shell(props: {
                   </Button>
                 </div>
               )}
-              <div className="block min-h-[80px] justify-between px-4 sm:flex sm:px-6 md:px-8">
+              <div className="block justify-between px-4 sm:flex sm:px-6 md:px-8">
                 {props.HeadingLeftIcon && <div className="ltr:mr-4">{props.HeadingLeftIcon}</div>}
                 <div className="mb-8 w-full">
                   <h1 className="font-cal mb-1 text-xl text-gray-900">{props.heading}</h1>
@@ -376,7 +375,7 @@ function UserDropdown({ small }: { small?: boolean }) {
   return (
     <Dropdown>
       <DropdownMenuTrigger asChild>
-        <div className="group flex w-full cursor-pointer appearance-none items-center">
+        <button className="group flex w-full cursor-pointer appearance-none items-center text-left">
           <span
             className={classNames(
               small ? "h-8 w-8" : "h-10 w-10",
@@ -396,7 +395,7 @@ function UserDropdown({ small }: { small?: boolean }) {
               <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-green-500"></div>
             )}
             {user?.away && (
-              <div className="abstleolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-yellow-500"></div>
+              <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-white bg-yellow-500"></div>
             )}
           </span>
           {!small && (
@@ -406,7 +405,7 @@ function UserDropdown({ small }: { small?: boolean }) {
                   {user?.username || "Nameless User"}
                 </span>
                 <span className="block truncate font-normal text-neutral-500">
-                  {user?.username ? `@${user.username}` : "No public page"}
+                  {user?.username ? `cal.com/${user.username}` : "No public page"}
                 </span>
               </span>
               <SelectorIcon
@@ -415,7 +414,7 @@ function UserDropdown({ small }: { small?: boolean }) {
               />
             </span>
           )}
-        </div>
+        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent portalled={true}>
         <DropdownMenuItem>
@@ -424,7 +423,7 @@ function UserDropdown({ small }: { small?: boolean }) {
               mutation.mutate({ away: !user?.away });
               utils.invalidateQueries("viewer.me");
             }}
-            className="flex cursor-pointer px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900">
+            className="flex min-w-max cursor-pointer px-4 py-2 text-sm hover:bg-gray-100 hover:text-gray-900">
             <MoonIcon
               className={classNames(
                 user?.away
@@ -449,8 +448,7 @@ function UserDropdown({ small }: { small?: boolean }) {
             </a>
           </DropdownMenuItem>
         )}
-        <IntercomMenuItem />
-        <ZendeskMenuItem />
+        <DropdownMenuSeparator className="h-px bg-gray-200" />
         <DropdownMenuSeparator className="h-px bg-gray-200" />
         <DropdownMenuItem>
           <a
