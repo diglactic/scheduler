@@ -218,7 +218,8 @@ export default class EventManager {
       const [updatedEvent] = Array.isArray(result.updatedEvent) ? result.updatedEvent : [result.updatedEvent];
       if (updatedEvent) {
         evt.videoCallData = updatedEvent;
-        evt.location = updatedEvent.url;
+        // TODO why is this here?
+        // evt.location = updatedEvent.url;
       }
       results.push(result);
     }
